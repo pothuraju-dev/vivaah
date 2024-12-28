@@ -45,9 +45,9 @@ await getBioProfiles()
         <RouterLink :to="`profile/${profile.id}`">
           <iconify-icon icon="lucide:eye" />
         </RouterLink>
-        <Button variant="ghost">
+        <RouterLink :to="`/${profile.id}`">
           <iconify-icon icon="lucide:square-arrow-out-up-right" />
-        </Button>
+        </RouterLink>
         <Button variant="ghost">
           <iconify-icon icon="lucide:square-pen" />
         </Button>
