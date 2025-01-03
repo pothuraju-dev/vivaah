@@ -20,11 +20,11 @@ const GuestLayout = defineAsyncComponent(
 )
 
 useMeta({
-  title: 'Pulse',
+  title: 'Vivaah',
   description: {
     name: 'description',
     content:
-      'Pulse is a project management tool that helps you organize your work.'
+      'Vivaah is platform to create matrimony bio data profiles.'
   }
 })
 </script>

@@ -15,6 +15,16 @@ const { getBioProfile } = bioProfilesLoader
 
 await getBioProfile(props.profileSlug)
 
+onMounted(() => {
+    useMeta({
+        title: `Vivaah | ${bioProfile.value.full_name}` || 'Vivaah',
+        og: {
+            image: bioProfile.value.documents[0]
+        }
+    })
+})
+
+
 const tableColumns = [{ key: "full_name", label: "Name" },
 { key: "date_of_birth", label: "Date of Birth" },
 { key: "time_of_birth", label: "Time of Birth" },
