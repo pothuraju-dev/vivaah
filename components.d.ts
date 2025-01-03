@@ -50,6 +50,7 @@ declare module 'vue' {
     Input: typeof import('./src/components/ui/input/Input.vue')['default']
     Label: typeof import('./src/components/ui/label/Label.vue')['default']
     LandingPage: typeof import('./src/components/Vivaah/LandingPage.vue')['default']
+    Profile: typeof import('./src/components/Vivaah/Profile.vue')['default']
     Profiles: typeof import('./src/components/Vivaah/Profiles.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

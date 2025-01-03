@@ -20,9 +20,10 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...catchAll]': RouteRecordInfo<'/[...catchAll]', '/:catchAll(.*)', { catchAll: ParamValue<true> }, { catchAll: ParamValue<false> }>,
-    '/[profile_id]': RouteRecordInfo<'/[profile_id]', '/:profile_id', { profile_id: ParamValue<true> }, { profile_id: ParamValue<false> }>,
+    '/[profile_slug]': RouteRecordInfo<'/[profile_slug]', '/:profile_slug', { profile_slug: ParamValue<true> }, { profile_slug: ParamValue<false> }>,
+    '/add-profile/': RouteRecordInfo<'/add-profile/', '/add-profile', Record<never, never>, Record<never, never>>,
     '/login': RouteRecordInfo<'/login', '/login', Record<never, never>, Record<never, never>>,
-    '/profile/[id]': RouteRecordInfo<'/profile/[id]', '/profile/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/profile/[slug]': RouteRecordInfo<'/profile/[slug]', '/profile/:slug', { slug: ParamValue<true> }, { slug: ParamValue<false> }>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
     '/projects/[slug]': RouteRecordInfo<'/projects/[slug]', '/projects/:slug', { slug: ParamValue<true> }, { slug: ParamValue<false> }>,
     '/register': RouteRecordInfo<'/register', '/register', Record<never, never>, Record<never, never>>,

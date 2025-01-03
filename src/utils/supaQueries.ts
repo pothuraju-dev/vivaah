@@ -104,7 +104,7 @@ export const deleteBioDataQuery = (id: number) => {
 
 export type BioDataProfiles = QueryData<typeof bioDataProfilesQuery>
 
-export const bioDataProfileQuery = (id: string) => {
+export const bioDataProfileQuery = (slug: string) => {
   return supabase
     .from('bio_data')
     .select(
@@ -115,7 +115,7 @@ export const bioDataProfileQuery = (id: string) => {
       )
     `
     )
-    .eq('id', id)
+    .eq('slug', slug)
     .single()
 }
 

@@ -15,7 +15,7 @@ router.beforeEach(async (to) => {
   }
   // const isAuthPage = ['/login', '/register'].includes(to.path)
 
-  if (to.path === '/bio-data-form' && !authStore.user) {
+  if (to.path === '/add-profile' && !authStore.user) {
     return {
       name: '/login'
     }

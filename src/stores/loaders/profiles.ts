@@ -60,10 +60,10 @@ export const useBioProfilesStore = defineStore('bio-data-profiles-store', () => 
     })
   }
 
-  const getBioProfile = async (id: string) => {
+  const getBioProfile = async (slug: string) => {
     bioProfile.value = null
 
-    const { data, error, status } = await loadBioProfile(id)
+    const { data, error, status } = await loadBioProfile(slug)
 
     if (error) useErrorStore().setError({ error, customCode: status })
 
@@ -72,7 +72,7 @@ export const useBioProfilesStore = defineStore('bio-data-profiles-store', () => 
     validateCache({
       ref: bioProfile,
       query: bioDataProfileQuery,
-      key: id,
+      key: slug,
       loaderFn: loadBioProfile
     })
   }

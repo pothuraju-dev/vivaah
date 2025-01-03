@@ -13,7 +13,19 @@ export interface CreateBioData {
   hobbies: string;
   gender: string;
   phone_number: string;
-  email: string;
   city: string;
   state: string;
+  slug: string;
+  place_of_birth: string;
+  rashi: string;
+  nakshatram: string;
+  color: string;
+  job: string;
+  salary: string;
+  native_place: string;
+  father_name: string;
+  mother_name: string;
+  sibling_details: string;
+  documents: string | string[];
+  user_id: string;
 }
