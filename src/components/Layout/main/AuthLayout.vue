@@ -2,8 +2,6 @@
 import AddNewBioData from '@/components/Vivaah/AddNewBioData.vue';
 
 const { pageData } = storeToRefs(usePageStore())
-const { profile_slug } = useRoute('/[profile_slug]').params
-
 const profileSheet = ref(false)
 </script>
 
@@ -12,7 +10,7 @@ const profileSheet = ref(false)
     <AddNewBioData v-model="profileSheet" />
 
     <div class="flex flex-col transition-[margin]">
-      <TopNavbar v-if="!profile_slug" @addProfile="profileSheet = true" />
+      <TopNavbar v-if="!$route.params.profile_slug" @addProfile="profileSheet = true" />
 
       <main class="flex flex-col flex-1 gap-4 p-4 lg:gap-6 lg:p-6">
         <div v-if="pageData.title" class="flex items-center">
